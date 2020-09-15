@@ -19,6 +19,7 @@
 		24AAFD26251153E100BE096A /* StorieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AAFD25251153E100BE096A /* StorieTableViewCell.swift */; };
 		24AAFD282511621800BE096A /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AAFD272511621800BE096A /* ServerManager.swift */; };
 		24AAFD2B251162B400BE096A /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AAFD2A251162B400BE096A /* Movie.swift */; };
+		24CCB4CB25116EDF00228B44 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CCB4CA25116EDF00228B44 /* SearchTableViewController.swift */; };
 		F199AE2ABDC3DD43E6356CD8 /* Pods_TMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5703B03C300AD49B0FA8F7E2 /* Pods_TMDB.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		24AAFD25251153E100BE096A /* StorieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorieTableViewCell.swift; sourceTree = "<group>"; };
 		24AAFD272511621800BE096A /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
 		24AAFD2A251162B400BE096A /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		24CCB4CA25116EDF00228B44 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		50BBB0B97FE7A61F8A16A4C0 /* Pods-TMDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMDB.release.xcconfig"; path = "Target Support Files/Pods-TMDB/Pods-TMDB.release.xcconfig"; sourceTree = "<group>"; };
 		5703B03C300AD49B0FA8F7E2 /* Pods_TMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88425639735A34EB006DD48 /* Pods-TMDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMDB.debug.xcconfig"; path = "Target Support Files/Pods-TMDB/Pods-TMDB.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				24AAFD0D25114C7D00BE096A /* ViewController.swift */,
+				24CCB4CA25116EDF00228B44 /* SearchTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				24AAFD0A25114C7D00BE096A /* AppDelegate.swift in Sources */,
 				24AAFD282511621800BE096A /* ServerManager.swift in Sources */,
 				24AAFD0C25114C7D00BE096A /* SceneDelegate.swift in Sources */,
+				24CCB4CB25116EDF00228B44 /* SearchTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
