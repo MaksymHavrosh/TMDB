@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="179" id="lxT-hF-Ldg" customClass="StorieTableViewCell" customModule="TMDB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="601" height="179"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lxT-hF-Ldg" id="hGd-Zx-mZe">
+                <rect key="frame" x="0.0" y="0.0" width="601" height="179"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSD-CM-U8u">
+                        <rect key="frame" x="20" y="147" width="561" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="SSD-CM-U8u" firstAttribute="bottom" secondItem="hGd-Zx-mZe" secondAttribute="bottomMargin" id="S6L-eV-Wxe"/>
+                    <constraint firstItem="SSD-CM-U8u" firstAttribute="leading" secondItem="hGd-Zx-mZe" secondAttribute="leadingMargin" id="czJ-bg-FPg"/>
+                    <constraint firstItem="SSD-CM-U8u" firstAttribute="trailing" secondItem="hGd-Zx-mZe" secondAttribute="trailingMargin" id="uyL-sp-mts"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.076768226920000002" green="0.076862581070000005" blue="0.076782830060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="nameLabel" destination="SSD-CM-U8u" id="5Hl-JT-yEs"/>
+            </connections>
+            <point key="canvasLocation" x="135.50724637681159" y="67.96875"/>
+        </tableViewCell>
+    </objects>
+</document>
