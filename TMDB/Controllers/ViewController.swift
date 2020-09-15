@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet private weak var scrollView: UIScrollView!
+    @IBOutlet private weak var pageControl: UIPageControl!
     
     private var screens = [UIView]()
     
@@ -22,10 +23,16 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         createPages()
     }
     
+    //MARK: - UIScrollViewDelegate
+    
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let pageNumber = scrollView.contentOffset.x / scrollView.frame.size.width
+        pageControl.currentPage = Int(pageNumber)
+    }
+    
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         setupSlideScrollView(with: screens)
     }
-
 }
 
 //MARK: - Private
@@ -57,6 +64,5 @@ private extension ViewController {
             scrollView.addSubview(pages[i])
         }
     }
-    
 }
 
