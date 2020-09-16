@@ -1,5 +1,5 @@
 //
-//  StoriesTableView.swift
+//  PopularMoviesTableView.swift
 //  TMDB
 //
 //  Created by MG on 15.09.2020.
@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import AlamofireImage
 
-class StoriesTableView: UITableView {
+class PopularMoviesTableView: UITableView {
     
     private var page = 1
     private var movies = [Movie]()
+    private let heigthForRow = CGFloat(100)
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
@@ -30,7 +32,7 @@ class StoriesTableView: UITableView {
 
 //MARK: - UITableViewDelegate
 
-extension StoriesTableView: UITableViewDelegate {
+extension PopularMoviesTableView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
@@ -42,16 +44,27 @@ extension StoriesTableView: UITableViewDelegate {
 
 //MARK: - UITableViewDataSource
 
-extension StoriesTableView: UITableViewDataSource {
+extension PopularMoviesTableView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         movies.count
     }
     
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        heigthForRow
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        heigthForRow
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = StorieTableViewCell.createCell()
+        let cell = PopularMovieTableViewCell.createCell()
         let movie = movies[indexPath.row]
         cell.nameLabel.text = movie.title
+        if let url = URL(string: "https://image.tmdb.org/t/p/w600_and_h900_bestv2" + movie.posterPath) {
+            cell.cellImageView.af.setImage(withURL: url)
+        }
         
         return cell
     }
@@ -59,7 +72,7 @@ extension StoriesTableView: UITableViewDataSource {
 
 //MARK: - Private
 
-private extension StoriesTableView {
+private extension PopularMoviesTableView {
     
     func getPopularMoviesFromServer() {
         

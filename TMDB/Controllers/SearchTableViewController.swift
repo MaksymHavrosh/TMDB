@@ -29,7 +29,7 @@ class SearchTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = StorieTableViewCell.createCell()
+        let cell = PopularMovieTableViewCell.createCell()
         let movie = movies[indexPath.row]
         cell.backgroundColor = .white
         cell.nameLabel.textColor = .black

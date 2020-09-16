@@ -16,15 +16,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="nwi-DU-kim">
-                                <rect key="frame" x="50" y="64" width="314" height="778"/>
+                                <rect key="frame" x="70" y="64" width="274" height="778"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nwi-DU-kim" secondAttribute="trailing" constant="50" id="FoG-r0-Ity"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nwi-DU-kim" secondAttribute="trailing" constant="70" id="FoG-r0-Ity"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nwi-DU-kim" secondAttribute="bottom" constant="20" id="KOQ-4C-YwZ"/>
                             <constraint firstItem="nwi-DU-kim" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="gkP-D4-9S5"/>
-                            <constraint firstItem="nwi-DU-kim" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="iKX-FJ-bG4"/>
+                            <constraint firstItem="nwi-DU-kim" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="iKX-FJ-bG4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

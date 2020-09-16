@@ -11,7 +11,7 @@ import UIKit
 class StoriePage: UIView {
     
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var tableView: StoriesTableView!
+    @IBOutlet weak var tableView: PopularMoviesTableView!
     @IBOutlet weak var pageControl: UIPageControl!
     
     class func createView() -> StoriePage {
