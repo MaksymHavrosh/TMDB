@@ -29,11 +29,16 @@ class SearchTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = PopularMovieTableViewCell.createCell()
         let movie = movies[indexPath.row]
         cell.backgroundColor = .white
         cell.nameLabel.textColor = .black
         cell.nameLabel.text = movie.title
+        
+        if let url = URL(string: "https://image.tmdb.org/t/p/w600_and_h900_bestv2" + movie.posterPath) {
+            cell.cellImageView.af.setImage(withURL: url)
+        }
         
         return cell
     }
