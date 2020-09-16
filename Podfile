@@ -8,5 +8,6 @@ target 'TMDB' do
   # Pods for TMDB
 
   pod 'Alamofire'
+  pod 'AlamofireImage'
 
 end

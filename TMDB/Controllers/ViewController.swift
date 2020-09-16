@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ViewController: UIViewController, UIScrollViewDelegate {
 
@@ -66,8 +67,13 @@ private extension ViewController {
         defaultFavouritesView.backgroundColor = .lightGray
         
         for i in 0..<numberTopRated {
+
             let view = TopRatedMovieView.createView()
-            view.nameLabel.text = topRatedMovies[i].title
+            let movie = topRatedMovies[i]
+            view.nameLabel.text = movie.title
+            if let url = URL(string: "https://image.tmdb.org/t/p/w600_and_h900_bestv2" + movie.posterPath) {
+                view.imageView.af.setImage(withURL: url)
+            }
             topRatedMovieViews.append(view)
         }
         
@@ -76,8 +82,8 @@ private extension ViewController {
         self.storiesPage = storiesPage
     }
     
-    func setupScrollView(_ scrolView: UIScrollView ,with pages: [UIView]) -> UIScrollView {
-        scrolView.contentSize = CGSize(width: view.frame.width * CGFloat(pages.count), height: scrolView.frame.height)
+    func setupScrollView(_ scrolView: UIScrollView, with pages: [UIView]) -> UIScrollView {
+        scrolView.contentSize = CGSize(width: view.frame.width * CGFloat(pages.count), height: 1.0)
         scrolView.isPagingEnabled = true
         
         for i in 0 ..< pages.count {

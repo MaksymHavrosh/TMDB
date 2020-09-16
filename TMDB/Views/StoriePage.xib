@@ -17,26 +17,29 @@
                     <rect key="frame" x="0.0" y="52" width="414" height="844"/>
                     <subviews>
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="etm-ao-Uc8">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="187"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="231.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <viewLayoutGuide key="contentLayoutGuide" id="KSB-Iy-001"/>
                             <viewLayoutGuide key="frameLayoutGuide" id="Ei9-kx-rfx"/>
                         </scrollView>
+                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="sgb-gn-u5L">
+                            <rect key="frame" x="0.0" y="231.5" width="414" height="37"/>
+                        </pageControl>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QVB-05-T79" customClass="StoriesTableView" customModule="TMDB" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="187" width="414" height="657"/>
+                            <rect key="frame" x="0.0" y="268.5" width="414" height="575.5"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <pageControl key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" id="dny-L8-3O4">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pageControl>
                         </tableView>
                     </subviews>
                     <constraints>
                         <constraint firstItem="etm-ao-Uc8" firstAttribute="leading" secondItem="uyE-fl-CN0" secondAttribute="leading" id="3Oh-qM-i4q"/>
+                        <constraint firstItem="sgb-gn-u5L" firstAttribute="leading" secondItem="uyE-fl-CN0" secondAttribute="leading" id="DLp-4j-LsB"/>
+                        <constraint firstItem="QVB-05-T79" firstAttribute="top" secondItem="sgb-gn-u5L" secondAttribute="bottom" id="FoN-b6-tSI"/>
                         <constraint firstAttribute="bottom" secondItem="QVB-05-T79" secondAttribute="bottom" id="GAl-zN-cWd"/>
+                        <constraint firstItem="sgb-gn-u5L" firstAttribute="top" secondItem="etm-ao-Uc8" secondAttribute="bottom" id="IGC-bO-2og"/>
                         <constraint firstAttribute="trailing" secondItem="etm-ao-Uc8" secondAttribute="trailing" id="YfA-Pq-BpR"/>
                         <constraint firstAttribute="trailing" secondItem="QVB-05-T79" secondAttribute="trailing" id="d4I-o6-3Ge"/>
                         <constraint firstItem="etm-ao-Uc8" firstAttribute="top" secondItem="uyE-fl-CN0" secondAttribute="top" id="gNN-lh-F2D"/>
-                        <constraint firstItem="QVB-05-T79" firstAttribute="top" secondItem="etm-ao-Uc8" secondAttribute="bottom" id="lUV-9L-tEq"/>
+                        <constraint firstAttribute="trailing" secondItem="sgb-gn-u5L" secondAttribute="trailing" id="jgW-gy-bhJ"/>
                         <constraint firstItem="QVB-05-T79" firstAttribute="leading" secondItem="uyE-fl-CN0" secondAttribute="leading" id="mQG-SD-sUe"/>
                     </constraints>
                 </stackView>
@@ -44,13 +47,18 @@
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="QVB-05-T79" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="2DF-gz-7Qz"/>
+                <constraint firstItem="uyE-fl-CN0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="8Ig-3a-qTU"/>
                 <constraint firstAttribute="bottom" secondItem="uyE-fl-CN0" secondAttribute="bottom" id="G9R-WZ-HfI"/>
-                <constraint firstItem="QVB-05-T79" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.733259" id="UTK-1Y-YJW"/>
+                <constraint firstAttribute="bottom" secondItem="uyE-fl-CN0" secondAttribute="bottom" id="VwX-x0-k3W"/>
+                <constraint firstItem="QVB-05-T79" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.642299" id="ZK3-p9-N7i"/>
                 <constraint firstItem="uyE-fl-CN0" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fBW-Uu-PQs"/>
+                <constraint firstItem="uyE-fl-CN0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="fg9-kb-NDo"/>
+                <constraint firstItem="uyE-fl-CN0" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="iu3-8p-TWi"/>
+                <constraint firstItem="etm-ao-Uc8" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.256138" id="uVI-u2-3eP"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="pageControl" destination="dny-L8-3O4" id="7JA-I4-6kZ"/>
+                <outlet property="pageControl" destination="sgb-gn-u5L" id="9NE-PX-EKT"/>
                 <outlet property="scrollView" destination="etm-ao-Uc8" id="RmR-0j-dta"/>
                 <outlet property="tableView" destination="QVB-05-T79" id="mXN-lO-ISe"/>
             </connections>

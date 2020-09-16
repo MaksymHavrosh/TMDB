@@ -42,13 +42,14 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Tjl-Yb-v5L" firstAttribute="height" secondItem="dvN-xn-fiY" secondAttribute="height" multiplier="0.813616" id="1eF-7V-Q5j"/>
                             <constraint firstItem="EYc-j9-fs6" firstAttribute="top" secondItem="fTP-5y-wYO" secondAttribute="top" id="33y-0V-fPU"/>
                             <constraint firstItem="Tjl-Yb-v5L" firstAttribute="trailing" secondItem="fTP-5y-wYO" secondAttribute="trailing" id="8mV-lS-OBh"/>
+                            <constraint firstItem="Tjl-Yb-v5L" firstAttribute="top" secondItem="EYc-j9-fs6" secondAttribute="bottom" constant="8" id="9R9-p3-GJN"/>
                             <constraint firstItem="EYc-j9-fs6" firstAttribute="leading" secondItem="fTP-5y-wYO" secondAttribute="leading" id="F7D-wH-rTc"/>
                             <constraint firstItem="Tjl-Yb-v5L" firstAttribute="leading" secondItem="fTP-5y-wYO" secondAttribute="leading" id="N2W-d3-dGU"/>
                             <constraint firstItem="Tjl-Yb-v5L" firstAttribute="bottom" secondItem="fTP-5y-wYO" secondAttribute="bottom" id="nqy-Nc-PuL"/>
                             <constraint firstItem="EYc-j9-fs6" firstAttribute="trailing" secondItem="fTP-5y-wYO" secondAttribute="trailing" id="ntq-Yo-Dg7"/>
-                            <constraint firstItem="Tjl-Yb-v5L" firstAttribute="top" secondItem="EYc-j9-fs6" secondAttribute="bottom" constant="8" id="vWT-Sc-raj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fTP-5y-wYO"/>
                     </view>

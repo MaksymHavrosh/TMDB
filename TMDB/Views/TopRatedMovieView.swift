@@ -10,6 +10,7 @@ import UIKit
 
 class TopRatedMovieView: UIView {
     
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     
     class func createView() -> TopRatedMovieView {
