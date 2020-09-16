@@ -34,36 +34,21 @@
                             <pageControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="EYc-j9-fs6">
                                 <rect key="frame" x="0.0" y="88" width="414" height="37"/>
                             </pageControl>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="snp-wC-NwD">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tjl-Yb-v5L">
                                 <rect key="frame" x="0.0" y="133" width="414" height="729"/>
-                                <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z8w-Vv-SxL">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="187"/>
-                                        <viewLayoutGuide key="contentLayoutGuide" id="ur1-Vq-QFH"/>
-                                        <viewLayoutGuide key="frameLayoutGuide" id="hjC-tn-A5I"/>
-                                    </scrollView>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tjl-Yb-v5L">
-                                        <rect key="frame" x="0.0" y="195" width="414" height="534"/>
-                                        <viewLayoutGuide key="contentLayoutGuide" id="6Q4-RB-Vci"/>
-                                        <viewLayoutGuide key="frameLayoutGuide" id="xsX-Uu-KeL"/>
-                                    </scrollView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </stackView>
+                                <viewLayoutGuide key="contentLayoutGuide" id="6Q4-RB-Vci"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="xsX-Uu-KeL"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="EYc-j9-fs6" firstAttribute="top" secondItem="fTP-5y-wYO" secondAttribute="top" id="33y-0V-fPU"/>
-                            <constraint firstItem="snp-wC-NwD" firstAttribute="trailing" secondItem="fTP-5y-wYO" secondAttribute="trailing" id="3BX-2x-eCe"/>
+                            <constraint firstItem="Tjl-Yb-v5L" firstAttribute="trailing" secondItem="fTP-5y-wYO" secondAttribute="trailing" id="8mV-lS-OBh"/>
                             <constraint firstItem="EYc-j9-fs6" firstAttribute="leading" secondItem="fTP-5y-wYO" secondAttribute="leading" id="F7D-wH-rTc"/>
-                            <constraint firstItem="Tjl-Yb-v5L" firstAttribute="height" secondItem="dvN-xn-fiY" secondAttribute="height" multiplier="0.595982" id="Gcq-qi-oQH"/>
-                            <constraint firstItem="z8w-Vv-SxL" firstAttribute="width" secondItem="dvN-xn-fiY" secondAttribute="width" id="az9-dd-cg2"/>
-                            <constraint firstItem="z8w-Vv-SxL" firstAttribute="height" secondItem="dvN-xn-fiY" secondAttribute="height" multiplier="0.208705" id="kVE-3f-F80"/>
-                            <constraint firstItem="snp-wC-NwD" firstAttribute="leading" secondItem="fTP-5y-wYO" secondAttribute="leading" id="mra-oc-vBv"/>
+                            <constraint firstItem="Tjl-Yb-v5L" firstAttribute="leading" secondItem="fTP-5y-wYO" secondAttribute="leading" id="N2W-d3-dGU"/>
+                            <constraint firstItem="Tjl-Yb-v5L" firstAttribute="bottom" secondItem="fTP-5y-wYO" secondAttribute="bottom" id="nqy-Nc-PuL"/>
                             <constraint firstItem="EYc-j9-fs6" firstAttribute="trailing" secondItem="fTP-5y-wYO" secondAttribute="trailing" id="ntq-Yo-Dg7"/>
-                            <constraint firstItem="snp-wC-NwD" firstAttribute="top" secondItem="EYc-j9-fs6" secondAttribute="bottom" constant="8" id="nwu-lw-Xcj"/>
-                            <constraint firstItem="Tjl-Yb-v5L" firstAttribute="width" secondItem="dvN-xn-fiY" secondAttribute="width" id="yCw-9M-EuW"/>
-                            <constraint firstItem="snp-wC-NwD" firstAttribute="bottom" secondItem="fTP-5y-wYO" secondAttribute="bottom" id="yt9-6d-PBW"/>
+                            <constraint firstItem="Tjl-Yb-v5L" firstAttribute="top" secondItem="EYc-j9-fs6" secondAttribute="bottom" constant="8" id="vWT-Sc-raj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fTP-5y-wYO"/>
                     </view>
@@ -76,8 +61,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="pageControl" destination="EYc-j9-fs6" id="R02-wj-l39"/>
-                        <outlet property="popularScrollView" destination="Tjl-Yb-v5L" id="KPb-9R-BOF"/>
-                        <outlet property="topRatedScrollView" destination="z8w-Vv-SxL" id="Ib9-U9-c5C"/>
+                        <outlet property="pageScrollView" destination="Tjl-Yb-v5L" id="KPb-9R-BOF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IKs-xD-Azx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

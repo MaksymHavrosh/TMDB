@@ -21,6 +21,8 @@
 		24AAFD2B251162B400BE096A /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AAFD2A251162B400BE096A /* Movie.swift */; };
 		24C509F12512018F00D703FA /* TopRatedMovieView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C509F02512018F00D703FA /* TopRatedMovieView.xib */; };
 		24C509F3251201FD00D703FA /* TopRatedMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C509F2251201FD00D703FA /* TopRatedMovieView.swift */; };
+		24C865E6251219F1004EC6E3 /* StoriePage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C865E5251219F1004EC6E3 /* StoriePage.xib */; };
+		24C865E825121AC7004EC6E3 /* StoriePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C865E725121AC7004EC6E3 /* StoriePage.swift */; };
 		24CCB4CB25116EDF00228B44 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CCB4CA25116EDF00228B44 /* SearchTableViewController.swift */; };
 		F199AE2ABDC3DD43E6356CD8 /* Pods_TMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5703B03C300AD49B0FA8F7E2 /* Pods_TMDB.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +44,8 @@
 		24AAFD2A251162B400BE096A /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		24C509F02512018F00D703FA /* TopRatedMovieView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopRatedMovieView.xib; sourceTree = "<group>"; };
 		24C509F2251201FD00D703FA /* TopRatedMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMovieView.swift; sourceTree = "<group>"; };
+		24C865E5251219F1004EC6E3 /* StoriePage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoriePage.xib; sourceTree = "<group>"; };
+		24C865E725121AC7004EC6E3 /* StoriePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriePage.swift; sourceTree = "<group>"; };
 		24CCB4CA25116EDF00228B44 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		50BBB0B97FE7A61F8A16A4C0 /* Pods-TMDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMDB.release.xcconfig"; path = "Target Support Files/Pods-TMDB/Pods-TMDB.release.xcconfig"; sourceTree = "<group>"; };
 		5703B03C300AD49B0FA8F7E2 /* Pods_TMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +117,8 @@
 				24AAFD232511535D00BE096A /* StorieTableViewCell.xib */,
 				24C509F2251201FD00D703FA /* TopRatedMovieView.swift */,
 				24C509F02512018F00D703FA /* TopRatedMovieView.xib */,
+				24C865E725121AC7004EC6E3 /* StoriePage.swift */,
+				24C865E5251219F1004EC6E3 /* StoriePage.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,6 +219,7 @@
 				24C509F12512018F00D703FA /* TopRatedMovieView.xib in Resources */,
 				24AAFD1625114C8000BE096A /* LaunchScreen.storyboard in Resources */,
 				24AAFD242511535D00BE096A /* StorieTableViewCell.xib in Resources */,
+				24C865E6251219F1004EC6E3 /* StoriePage.xib in Resources */,
 				24AAFD1325114C8000BE096A /* Assets.xcassets in Resources */,
 				24AAFD1E25114D6800BE096A /* Readme.md in Resources */,
 				24AAFD1125114C7D00BE096A /* Main.storyboard in Resources */,
@@ -274,6 +281,7 @@
 				24AAFD212511530500BE096A /* StoriesTableView.swift in Sources */,
 				24AAFD0A25114C7D00BE096A /* AppDelegate.swift in Sources */,
 				24AAFD282511621800BE096A /* ServerManager.swift in Sources */,
+				24C865E825121AC7004EC6E3 /* StoriePage.swift in Sources */,
 				24AAFD0C25114C7D00BE096A /* SceneDelegate.swift in Sources */,
 				24CCB4CB25116EDF00228B44 /* SearchTableViewController.swift in Sources */,
 				24C509F3251201FD00D703FA /* TopRatedMovieView.swift in Sources */,

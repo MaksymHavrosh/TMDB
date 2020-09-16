@@ -10,8 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UIScrollViewDelegate {
 
-    @IBOutlet private weak var popularScrollView: UIScrollView!
-    @IBOutlet private weak var topRatedScrollView: UIScrollView!
+    @IBOutlet private weak var pageScrollView: UIScrollView!
     @IBOutlet private weak var pageControl: UIPageControl!
     
     private var screens = [UIView]()
@@ -19,25 +18,32 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     private var topRatedMovies = [Movie]()
     private var topRatedMovieViews = [TopRatedMovieView]()
     
+    private var storiesPage: StoriePage?
+    
     //MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        popularScrollView.delegate = self
-        topRatedScrollView.delegate = self
+        pageScrollView.delegate = self
         getPopularMoviesFromServer()
     }
     
     //MARK: - UIScrollViewDelegate
     
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let pageNumber = scrollView.contentOffset.x / scrollView.frame.size.width
-        pageControl.currentPage = Int(pageNumber)
+        
+        if scrollView == pageScrollView {
+            let pageNumber = scrollView.contentOffset.x / scrollView.frame.size.width
+            pageControl.currentPage = Int(pageNumber)
+            
+        } else if let storiesPage = storiesPage {
+            let storiesPageNumber = storiesPage.scrollView.contentOffset.x / scrollView.frame.size.width
+            self.storiesPage?.pageControl.currentPage = Int(storiesPageNumber)
+        }
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        popularScrollView = setupScrollView(popularScrollView, with: screens)
-        topRatedScrollView = setupScrollView(topRatedScrollView, with: topRatedMovieViews)
+        pageScrollView = setupScrollView(pageScrollView, with: screens)
     }
 }
 
@@ -47,8 +53,9 @@ private extension ViewController {
     
     func createPages() {
         
-        let storieTableView = StoriesTableView()
-        screens.append(storieTableView)
+        let storiesPage = StoriePage.createView()
+        storiesPage.scrollView.delegate = self
+        screens.append(storiesPage)
         
         let defaultVideoView = UIView()
         screens.append(defaultVideoView)
@@ -64,8 +71,9 @@ private extension ViewController {
             topRatedMovieViews.append(view)
         }
         
-        popularScrollView = setupScrollView(popularScrollView, with: screens)
-        topRatedScrollView = setupScrollView(topRatedScrollView, with: topRatedMovieViews)
+        pageScrollView = setupScrollView(pageScrollView, with: screens)
+        storiesPage.scrollView = setupScrollView(storiesPage.scrollView, with: topRatedMovieViews)
+        self.storiesPage = storiesPage
     }
     
     func setupScrollView(_ scrolView: UIScrollView ,with pages: [UIView]) -> UIScrollView {
@@ -73,7 +81,7 @@ private extension ViewController {
         scrolView.isPagingEnabled = true
         
         for i in 0 ..< pages.count {
-            pages[i].frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: view.frame.height)
+            pages[i].frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: scrolView.frame.height)
             scrolView.addSubview(pages[i])
         }
         return scrolView

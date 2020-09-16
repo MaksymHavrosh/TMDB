@@ -9,11 +9,11 @@
 import UIKit
 
 class SearchTableViewController: UITableViewController {
+
+    @IBOutlet weak var searchBar: UISearchBar!
     
     private var page = 1
     private var movies = [Movie]()
-
-    @IBOutlet weak var searchBar: UISearchBar!
     
     //MARK: - LifeCycle
     
