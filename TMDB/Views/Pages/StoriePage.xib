@@ -18,7 +18,20 @@
                     <subviews>
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="etm-ao-Uc8">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="231.5"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Top" translatesAutoresizingMaskIntoConstraints="NO" id="dDg-ox-KRB">
+                                    <rect key="frame" x="346" y="0.0" width="60" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="lwZ-98-bMe"/>
+                                        <constraint firstAttribute="width" constant="60" id="r51-hb-yJY"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Ei9-kx-rfx" firstAttribute="trailing" secondItem="dDg-ox-KRB" secondAttribute="trailing" constant="8" id="BD4-tm-QHV"/>
+                                <constraint firstItem="dDg-ox-KRB" firstAttribute="top" secondItem="Ei9-kx-rfx" secondAttribute="top" id="vWs-PW-gcH"/>
+                            </constraints>
                             <viewLayoutGuide key="contentLayoutGuide" id="KSB-Iy-001"/>
                             <viewLayoutGuide key="frameLayoutGuide" id="Ei9-kx-rfx"/>
                         </scrollView>
@@ -65,4 +78,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>
         </view>
     </objects>
+    <resources>
+        <image name="Top" width="317" height="317"/>
+    </resources>
 </document>

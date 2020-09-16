@@ -15,7 +15,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet private weak var pageControl: UIPageControl!
     
     private var screens = [UIView]()
-    private let numberTopRated = 5
+    private let numberTopRated = 10 // 1...10
     private var topRatedMovies = [Movie]()
     private var topRatedMovieViews = [TopRatedMovieView]()
     
@@ -26,7 +26,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         pageScrollView.delegate = self
-        getPopularMoviesFromServer()
+        getTopRatedMoviesFromServer()
     }
     
     //MARK: - UIScrollViewDelegate
@@ -56,15 +56,14 @@ private extension ViewController {
         
         let storiesPage = StoriePage.createView()
         storiesPage.scrollView.delegate = self
+        storiesPage.pageControl.numberOfPages = numberTopRated
         screens.append(storiesPage)
         
-        let defaultVideoView = UIView()
-        screens.append(defaultVideoView)
-        defaultVideoView.backgroundColor = .darkGray
+        let videoPade = VideoPage.createView()
+        screens.append(videoPade)
         
-        let defaultFavouritesView = UIView()
-        screens.append(defaultFavouritesView)
-        defaultFavouritesView.backgroundColor = .lightGray
+        let favoritesPage = FavoritesPage.createView()
+        screens.append(favoritesPage)
         
         for i in 0..<numberTopRated {
 
@@ -93,7 +92,7 @@ private extension ViewController {
         return scrolView
     }
     
-    func getPopularMoviesFromServer() {
+    func getTopRatedMoviesFromServer() {
         
         ServerManager.getTopRatedMovies(page: 1) { (topRatedMovies) in
             self.topRatedMovies = topRatedMovies
